@@ -3,30 +3,75 @@ package com.example.didatiacapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Switch;
 
 public class arrastrar_soltar extends AppCompatActivity {
 
     //
-    ImageView img_1,img_2;
+    ImageView img_1,img_2,base_1,img_3;
+    Intent intent;
+    int comprobar=0,gano=0;
+    public int nivel=1;
+    Button b_1;
     //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arrastrar_soltar);
-        img_1=findViewById(R.id.i_1);
-        img_2=findViewById(R.id.i_2);
+        img_1 = findViewById(R.id.i_1);
+        img_2 = findViewById(R.id.i_2);
+        img_3 = findViewById(R.id.i_3);
+        b_1 = findViewById(R.id.siguiente);
+        base_1 = findViewById(R.id.base);
+        compruebo();
+
         img_1.setOnTouchListener(new ChoiceTouchListener());
-        img_1.setOnDragListener(new ChoiceDragListener());
         img_2.setOnTouchListener(new ChoiceTouchListener());
-        img_2.setOnDragListener(new ChoiceDragListener());
+        img_3.setOnTouchListener(new ChoiceTouchListener());
+
+
+        base_1.setOnDragListener(new ChoiceDragListener());
+
+        b_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (gano == 1) {
+                    nivel = nivel + 1;
+                    compruebo();
+                }
+            }
+        });
+
+
+
+
+        }
+
+
+    private void compruebo() {
+        if(nivel==1)
+
+        {
+            img_1.setImageResource(R.drawable.c1);
+            img_2.setImageResource(R.drawable.c2);
+            img_3.setImageResource(R.drawable.c3);
+        }else if(nivel==2)
+
+        {
+            img_1.setImageResource(R.drawable.c3);
+            img_2.setImageResource(R.drawable.c6);
+            img_3.setImageResource(R.drawable.c8);
+        }
     }
+
+
     //Permite gravar vista
     private final class ChoiceTouchListener implements View.OnTouchListener{
 
@@ -36,12 +81,56 @@ public class arrastrar_soltar extends AppCompatActivity {
                 ClipData data = ClipData.newPlainText("","");
                 View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(v);
                 v.startDrag(data,shadowBuilder,v,0);
+
+                //compruebo cual se toco
+                if(nivel==1) {
+                    switch (v.getId()) {
+                        case R.id.i_1:
+
+                            comprobar = 1;
+                            gano=1;
+                            break;
+
+                        case R.id.i_2:
+                            comprobar = 0;
+                            gano=0;
+
+                            break;
+
+                        case R.id.i_3:
+                            comprobar = 0;
+                            gano=0;
+
+                            break;
+                    }
+                }else if (nivel==2){
+                    switch (v.getId()) {
+                        case R.id.i_1:
+
+                            comprobar = 0;
+                            gano=0;
+                            break;
+
+                        case R.id.i_2:
+                            comprobar = 1;
+                            gano=1;
+
+                            break;
+
+                        case R.id.i_3:
+                            comprobar = 0;
+                            gano=0;
+
+                            break;
+                    }
+                }
+                //compruebo cual se toco
                 return  true;
+
             }else { return false;}
         }
     }
     //gravar vista
-    //
    private class ChoiceDragListener implements View.OnDragListener{
 
         @Override
@@ -58,9 +147,24 @@ public class arrastrar_soltar extends AppCompatActivity {
                         //accion no nesesaria
                         break;
                 case DragEvent.ACTION_DROP:
-                        ImageView view =(ImageView) event.getLocalState();
-                        ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.logo));
-                        ((ImageView)view).setImageDrawable(null);//remp
+                    //compruebo si es el correcto
+                    if(nivel==1){
+                        if(comprobar==1){
+                            comprobar=0;
+                            ImageView view =(ImageView) event.getLocalState();
+                            ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c1));
+                            ((ImageView)view).setImageDrawable(null);//remp
+                        }
+                    }else if (nivel==2){
+                        if(comprobar==1){
+                            comprobar=0;
+                            ImageView view =(ImageView) event.getLocalState();
+                            ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c6));
+                            ((ImageView)view).setImageDrawable(null);//remp
+                        }
+                    }
+
+                    //compruebo si es el correcto
                         break;
                 case DragEvent.ACTION_DRAG_ENDED:
                     //accion no nesesaria
