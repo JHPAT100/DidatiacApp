@@ -24,7 +24,7 @@ Intent intent;
 
         switch(v.getId()){
             case R.id.img_1:
-                intent= new Intent(this, menu_juegos.class);
+                intent= new Intent(this, memorama.class);
                 this.startActivity(intent);
                 break;
 

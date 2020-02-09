@@ -9,10 +9,16 @@
         android:roundIcon="@mipmap/logo_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".menu_juegos"
+        <activity android:name=".memorama"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" ></activity>
-        <activity android:name=".visor_imagenes"
+        <activity android:name=".arrastrar_soltar" />
+        <activity
+            android:name=".menu_juegos"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".visor_imagenes"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
         <activity
