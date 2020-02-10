@@ -2,9 +2,11 @@ package com.example.didatiacapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,6 +21,8 @@ public class arrastrar_soltar extends AppCompatActivity {
     int comprobar=0,gano=0;
     public int nivel=1;
     Button b_1;
+    ProgressDialog progreso;
+
     //
 
     @Override
@@ -30,6 +34,7 @@ public class arrastrar_soltar extends AppCompatActivity {
         img_3 = findViewById(R.id.i_3);
         b_1 = findViewById(R.id.siguiente);
         base_1 = findViewById(R.id.base);
+        progreso=new ProgressDialog(this);
         compruebo();
 
         img_1.setOnTouchListener(new ChoiceTouchListener());
@@ -43,8 +48,21 @@ public class arrastrar_soltar extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (gano == 1) {
+                    gano=0;
                     nivel = nivel + 1;
+                    progreso.setMessage("Comprobando....");
+                    progreso.show();
                     compruebo();
+                }else if(gano==0){
+                    progreso.setMessage("Comprobando....");
+                    progreso.show();
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            progreso.cancel();
+                        }
+                        //Coloco el tiempo en milisegundos
+                    },500);
                 }
             }
         });
@@ -62,12 +80,20 @@ public class arrastrar_soltar extends AppCompatActivity {
             img_1.setImageResource(R.drawable.c1);
             img_2.setImageResource(R.drawable.c2);
             img_3.setImageResource(R.drawable.c3);
+
         }else if(nivel==2)
 
         {
             img_1.setImageResource(R.drawable.c3);
             img_2.setImageResource(R.drawable.c6);
             img_3.setImageResource(R.drawable.c8);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                   progreso.cancel();
+                }
+                //Coloco el tiempo en milisegundos
+            },500);
         }
     }
 
