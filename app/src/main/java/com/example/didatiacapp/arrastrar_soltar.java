@@ -25,7 +25,7 @@ public class arrastrar_soltar extends AppCompatActivity {
     Button b_1;
     TextView txt;
     ProgressDialog progreso;
-    MediaPlayer a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19;
+    MediaPlayer a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,victori;
     //
 
     @Override
@@ -58,6 +58,7 @@ public class arrastrar_soltar extends AppCompatActivity {
         a17= MediaPlayer.create(this, R.raw.huesos);
         a18= MediaPlayer.create(this, R.raw.piel);
         a19= MediaPlayer.create(this, R.raw.cuerpo);
+        victori= MediaPlayer.create(this, R.raw.victoria);
         //audios
         progreso=new ProgressDialog(this);
         compruebo();
@@ -216,7 +217,7 @@ public class arrastrar_soltar extends AppCompatActivity {
                             ImageView view =(ImageView) event.getLocalState();
                             ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c1));
                             ((ImageView)view).setImageDrawable(null);//remp
-                            a1.start();
+                            victori.start();
                         }
                     }else if (nivel==2){
                         if(comprobar==1){
@@ -224,7 +225,7 @@ public class arrastrar_soltar extends AppCompatActivity {
                             ImageView view =(ImageView) event.getLocalState();
                             ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c6));
                             ((ImageView)view).setImageDrawable(null);//remp
-                            a7.start();
+                            victori.start();
 
                         }
                     }

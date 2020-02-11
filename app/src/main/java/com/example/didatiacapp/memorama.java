@@ -3,6 +3,7 @@ package com.example.didatiacapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -19,6 +20,8 @@ public class memorama extends AppCompatActivity {
     //los botones del juego
     ImageButton el0, el1, el2, el3, el4, el5, el6, el7, el8, el9, el10, el11, el12, el13, el14, el15;
 
+    //auidos
+    MediaPlayer victori;
     //los botones del menú
     Button reiniciar, salir;
 
@@ -57,6 +60,7 @@ public class memorama extends AppCompatActivity {
         cargarImagenes();
         botonesMenu();
         iniciar();
+        victori= MediaPlayer.create(this, R.raw.victoria);
     }
 
     public void cargarImagenes(){
@@ -175,6 +179,7 @@ public class memorama extends AppCompatActivity {
                 //al llegar a8 aciertos se ha ganado el juego
                 if(aciertos==8){
                     Toast toast = Toast.makeText(getApplicationContext(), "Has ganado!!", Toast.LENGTH_LONG);
+                    victori.start();
                     toast.show();
                 }
             }else{//si NO coincide el valor los volvemos a tapar al cabo de un segundo
