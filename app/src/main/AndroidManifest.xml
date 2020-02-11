@@ -10,9 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".memorama"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".menu_juegos"
             android:screenOrientation="portrait" ></activity>
-        <activity android:name=".arrastrar_soltar" />
+        <activity android:name=".arrastrar_soltar"
+            android:parentActivityName=".menu_juegos"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".menu_juegos"
             android:parentActivityName=".MainActivity"

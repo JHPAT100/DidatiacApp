@@ -12,6 +12,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class arrastrar_soltar extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class arrastrar_soltar extends AppCompatActivity {
     int comprobar=0,gano=0;
     public int nivel=1;
     Button b_1;
+    TextView txt;
     ProgressDialog progreso;
 
     //
@@ -32,6 +34,7 @@ public class arrastrar_soltar extends AppCompatActivity {
         img_1 = findViewById(R.id.i_1);
         img_2 = findViewById(R.id.i_2);
         img_3 = findViewById(R.id.i_3);
+        txt = findViewById(R.id.texto_datos);
         b_1 = findViewById(R.id.siguiente);
         base_1 = findViewById(R.id.base);
         progreso=new ProgressDialog(this);
@@ -77,13 +80,18 @@ public class arrastrar_soltar extends AppCompatActivity {
         if(nivel==1)
 
         {
+            base_1.setImageResource(R.drawable.c1_e);
+            txt.setText("Organo responsable del pensamiento \n y el buen funcionanmiento del cuerpo");
             img_1.setImageResource(R.drawable.c1);
             img_2.setImageResource(R.drawable.c2);
             img_3.setImageResource(R.drawable.c3);
 
+
         }else if(nivel==2)
 
         {
+            base_1.setImageResource(R.drawable.c6_e);
+            txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
             img_1.setImageResource(R.drawable.c3);
             img_2.setImageResource(R.drawable.c6);
             img_3.setImageResource(R.drawable.c8);
