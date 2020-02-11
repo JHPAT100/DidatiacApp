@@ -22,7 +22,7 @@ Intent intent;
                 break;
 
             case R.id.m_2:
-                intent= new Intent(this, arrastrar_soltar.class);
+                intent= new Intent(this, escojer_niveles.class);
                 this.startActivity(intent);
                 break;
         }

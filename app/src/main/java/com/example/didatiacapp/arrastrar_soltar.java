@@ -44,20 +44,11 @@ public class arrastrar_soltar extends AppCompatActivity {
         a3= MediaPlayer.create(this, R.raw.estomago);
         a4= MediaPlayer.create(this, R.raw.higado);
         a5= MediaPlayer.create(this, R.raw.intestino);
-        a6= MediaPlayer.create(this, R.raw.pancreas);
-        a7= MediaPlayer.create(this, R.raw.rinones);
-        a8= MediaPlayer.create(this, R.raw.pulmones);
-        a9= MediaPlayer.create(this, R.raw.musculos);
-        a10= MediaPlayer.create(this, R.raw.timo);
-        a11= MediaPlayer.create(this, R.raw.bazo);
-        a12= MediaPlayer.create(this, R.raw.ojos);
-        a13= MediaPlayer.create(this, R.raw.oido);
-        a14= MediaPlayer.create(this, R.raw.lengua);
-        a15= MediaPlayer.create(this, R.raw.nariz);
-        a16= MediaPlayer.create(this, R.raw.dientes);
-        a17= MediaPlayer.create(this, R.raw.huesos);
-        a18= MediaPlayer.create(this, R.raw.piel);
-        a19= MediaPlayer.create(this, R.raw.cuerpo);
+        a6= MediaPlayer.create(this, R.raw.rinones);
+        a7= MediaPlayer.create(this, R.raw.traquea);
+        a8= MediaPlayer.create(this, R.raw.pancreas);
+
+
         victori= MediaPlayer.create(this, R.raw.victoria);
         //audios
         progreso=new ProgressDialog(this);
@@ -110,9 +101,7 @@ public class arrastrar_soltar extends AppCompatActivity {
             img_3.setImageResource(R.drawable.c3);
 
 
-        }else if(nivel==2)
-
-        {
+        }else if(nivel==2) {
             base_1.setImageResource(R.drawable.c6_e);
             txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
             img_1.setImageResource(R.drawable.c3);
@@ -122,6 +111,71 @@ public class arrastrar_soltar extends AppCompatActivity {
                 @Override
                 public void run() {
                    progreso.cancel();
+                }
+                //Coloco el tiempo en milisegundos
+            },500);
+        }else if(nivel==3) {
+            base_1.setImageResource(R.drawable.c8_e);
+            txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
+            img_1.setImageResource(R.drawable.c4);
+            img_2.setImageResource(R.drawable.c5);
+            img_3.setImageResource(R.drawable.c8);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    progreso.cancel();
+                }
+                //Coloco el tiempo en milisegundos
+            },500);
+        }else if(nivel==4) {
+            base_1.setImageResource(R.drawable.c7_e);
+            txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
+            img_1.setImageResource(R.drawable.c2);
+            img_2.setImageResource(R.drawable.c7);
+            img_3.setImageResource(R.drawable.c3);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    progreso.cancel();
+                }
+                //Coloco el tiempo en milisegundos
+            },500);
+        }else if(nivel==5) {
+            base_1.setImageResource(R.drawable.c4_e);
+            txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
+            img_1.setImageResource(R.drawable.c4);
+            img_2.setImageResource(R.drawable.c3);
+            img_3.setImageResource(R.drawable.c1);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    progreso.cancel();
+                }
+                //Coloco el tiempo en milisegundos
+            },500);
+        }else if(nivel==6) {
+            base_1.setImageResource(R.drawable.c5_e);
+            txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
+            img_1.setImageResource(R.drawable.c3);
+            img_2.setImageResource(R.drawable.c6);
+            img_3.setImageResource(R.drawable.c5);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    progreso.cancel();
+                }
+                //Coloco el tiempo en milisegundos
+            },500);
+        }else if(nivel==7) {
+            base_1.setImageResource(R.drawable.c2_e);
+            txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
+            img_1.setImageResource(R.drawable.c3);
+            img_2.setImageResource(R.drawable.c2);
+            img_3.setImageResource(R.drawable.c4);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    progreso.cancel();
                 }
                 //Coloco el tiempo en milisegundos
             },500);
@@ -186,6 +240,121 @@ public class arrastrar_soltar extends AppCompatActivity {
 
                             break;
                     }
+                }else if (nivel==3){
+                    switch (v.getId()) {
+                        case R.id.i_1:
+
+                            comprobar = 0;
+                            gano=0;
+                            a4.start();
+                            break;
+
+                        case R.id.i_2:
+                            comprobar = 0;
+                            gano=0;
+                            a5.start();
+
+                            break;
+
+                        case R.id.i_3:
+                            comprobar = 1;
+                            gano=1;
+                            a8.start();
+
+                            break;
+                    }
+                }else if (nivel==4){
+                    switch (v.getId()) {
+                        case R.id.i_1:
+
+                            comprobar = 0;
+                            gano=0;
+                            a2.start();
+                            break;
+
+                        case R.id.i_2:
+                            comprobar = 1;
+                            gano=1;
+                            a7.start();
+
+                            break;
+
+                        case R.id.i_3:
+                            comprobar = 0;
+                            gano=0;
+                            a3.start();
+
+                            break;
+                    }
+                }else if (nivel==5){
+                    switch (v.getId()) {
+                        case R.id.i_1:
+
+                            comprobar = 1;
+                            gano=1;
+                            a4.start();
+                            break;
+
+                        case R.id.i_2:
+                            comprobar = 0;
+                            gano=0;
+                            a3.start();
+
+                            break;
+
+                        case R.id.i_3:
+                            comprobar = 0;
+                            gano=0;
+                            a1.start();
+
+                            break;
+                    }
+                }else if (nivel==6){
+                    switch (v.getId()) {
+                        case R.id.i_1:
+
+                            comprobar = 0;
+                            gano=0;
+                            a3.start();
+                            break;
+
+                        case R.id.i_2:
+                            comprobar = 0;
+                            gano=0;
+                            a6.start();
+
+                            break;
+
+                        case R.id.i_3:
+                            comprobar = 1;
+                            gano=1;
+                            a5.start();
+
+                            break;
+                    }
+                }else if (nivel==7){
+                    switch (v.getId()) {
+                        case R.id.i_1:
+
+                            comprobar = 0;
+                            gano=0;
+                            a3.start();
+                            break;
+
+                        case R.id.i_2:
+                            comprobar = 1;
+                            gano=1;
+                            a2.start();
+
+                            break;
+
+                        case R.id.i_3:
+                            comprobar = 0;
+                            gano=0;
+                            a4.start();
+
+                            break;
+                    }
                 }
                 //compruebo cual se toco
                 return  true;
@@ -224,6 +393,56 @@ public class arrastrar_soltar extends AppCompatActivity {
                             comprobar=0;
                             ImageView view =(ImageView) event.getLocalState();
                             ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c6));
+                            ((ImageView)view).setImageDrawable(null);//remp
+                            victori.start();
+
+                        }
+                    }
+                    else if (nivel==3){
+                        if(comprobar==1){
+                            comprobar=0;
+                            ImageView view =(ImageView) event.getLocalState();
+                            ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c8));
+                            ((ImageView)view).setImageDrawable(null);//remp
+                            victori.start();
+
+                        }
+                    }
+                    else if (nivel==4){
+                        if(comprobar==1){
+                            comprobar=0;
+                            ImageView view =(ImageView) event.getLocalState();
+                            ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c7));
+                            ((ImageView)view).setImageDrawable(null);//remp
+                            victori.start();
+
+                        }
+                    }
+                    else if (nivel==5){
+                        if(comprobar==1){
+                            comprobar=0;
+                            ImageView view =(ImageView) event.getLocalState();
+                            ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c4));
+                            ((ImageView)view).setImageDrawable(null);//remp
+                            victori.start();
+
+                        }
+                    }
+                    else if (nivel==6){
+                        if(comprobar==1){
+                            comprobar=0;
+                            ImageView view =(ImageView) event.getLocalState();
+                            ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c5));
+                            ((ImageView)view).setImageDrawable(null);//remp
+                            victori.start();
+
+                        }
+                    }
+                    else if (nivel==7){
+                        if(comprobar==1){
+                            comprobar=0;
+                            ImageView view =(ImageView) event.getLocalState();
+                            ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c2));
                             ((ImageView)view).setImageDrawable(null);//remp
                             victori.start();
 
