@@ -27,10 +27,10 @@ public class visor_imagenes extends AppCompatActivity {
                 if (contador > 0) {
                     contador = contador - 1;
                     if (contador == 0) {
-                        contador = contador + 3;
+                        contador = contador + 19;
                     }
                 } else if (contador == 0) {
-                    contador = contador + 3;
+                    contador = contador + 19;
                 }
                 //Contador1
                 //switch

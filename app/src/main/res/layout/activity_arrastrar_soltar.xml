@@ -10,12 +10,12 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16000003">
+        app:layout_constraintVertical_bias="0.089999974">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,20 +24,26 @@
 
             <!--Card Menu-->
             <TableRow
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardBackgroundColor="#3F51B5">
+                    app:cardBackgroundColor="#03A9F4">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Arrastra y suelta la opcion correcta" />
+                        android:text="Arrastra y suelta la opcion correcta:"
+                        android:textColor="#000000" />
                 </androidx.cardview.widget.CardView>
             </TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" " />
             <!--Card Menu-->
             <TableRow
                 android:layout_width="wrap_content"
@@ -46,35 +52,68 @@
 
                 <ImageView
                     android:id="@+id/base"
-                    android:layout_width="89dp"
-                    android:layout_height="88dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@android:drawable/btn_dialog" />
+                    app:srcCompat="@drawable/c1_e" />
             </TableRow>
             <!--Card-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:text=" " />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:text=" " />
+
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
 
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <View
-                        android:id="@+id/divider"
-                        android:layout_width="200dp"
-                        android:layout_height="1dp"
-                        android:background="?android:attr/listDivider"
-                        android:backgroundTint="#000000" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Explicacion" />
+                        android:text="Organo responsable del pensamiento \n y el buen funcionanmiento del cuerpo" />
+
                 </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
             </TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:text=" " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" " />
 
 
             <!--Card-->
@@ -83,51 +122,99 @@
     </androidx.cardview.widget.CardView>
     <!--Card-->
 
-    <ImageView
-        android:id="@+id/i_1"
-        android:layout_width="83dp"
-        android:layout_height="95dp"
+    <!--Card-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74"
-        app:srcCompat="@mipmap/logo_app" />
+        app:layout_constraintVertical_bias="0.72">
 
-    <ImageView
-        android:id="@+id/i_2"
-        android:layout_width="83dp"
-        android:layout_height="95dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74"
-        app:srcCompat="@drawable/c1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/i_3"
-        android:layout_width="83dp"
-        android:layout_height="95dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.84"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74"
-        app:srcCompat="@drawable/c3" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#DB7971">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Opciones:"
+                        android:textColor="#000000" />
+                </androidx.cardview.widget.CardView>
+            </TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" " />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/i_1"
+                    android:layout_width="83dp"
+                    android:layout_height="95dp"
+                    app:srcCompat="@drawable/c1" />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+
+
+                <ImageView
+                    android:id="@+id/i_2"
+                    android:layout_width="83dp"
+                    android:layout_height="95dp"
+                    app:srcCompat="@drawable/c5" />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text=" " />
+
+
+                <ImageView
+                    android:id="@+id/i_3"
+                    android:layout_width="83dp"
+                    android:layout_height="95dp"
+                    app:srcCompat="@drawable/c3" />
+            </TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" " />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--Card-->
+
 
     <Button
         android:id="@+id/siguiente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_width="143dp"
+        android:layout_height="37dp"
+        android:background="@drawable/buttom_rounded"
+        android:text="Siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.89" />
+        app:layout_constraintVertical_bias="0.93" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
