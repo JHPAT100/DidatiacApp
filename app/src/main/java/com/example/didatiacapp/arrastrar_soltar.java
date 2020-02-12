@@ -173,7 +173,20 @@ public class arrastrar_soltar extends AppCompatActivity {
                 }
                 //Coloco el tiempo en milisegundos
             },500);
-        }else if(nivel==1 || nivel_c==1)
+        }else if(nivel==8 || nivel_c==8) {
+        base_1.setImageResource(R.drawable.in);
+        txt.setText("Organo responsable de bombear\nla sangre por  el cuerpo ");
+        img_1.setImageResource(R.drawable.c3);
+        img_2.setImageResource(R.drawable.c4);
+        img_3.setImageResource(R.drawable.c7);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                progreso.cancel();
+            }
+            //Coloco el tiempo en milisegundos
+        },500);
+    }else if(nivel==1 || nivel_c==1)
 
         {
             base_1.setImageResource(R.drawable.c1_e);
@@ -336,7 +349,30 @@ public class arrastrar_soltar extends AppCompatActivity {
 
                             break;
                     }
-                } else if(nivel==1 || nivel_c==1) {
+                } else if (nivel==8 || nivel_c==8){
+                   switch (v.getId()) {
+                       case R.id.i_1:
+
+                           comprobar = 1;
+                           gano=1;
+                           a3.start();
+                           break;
+
+                       case R.id.i_2:
+                           comprobar = 0;
+                           gano=0;
+                           a4.start();
+
+                           break;
+
+                       case R.id.i_3:
+                           comprobar = 0;
+                           gano=0;
+                           a7.start();
+
+                           break;
+                   }
+               }else if(nivel==1 || nivel_c==1) {
                     switch (v.getId()) {
                         case R.id.i_1:
 
@@ -439,6 +475,15 @@ public class arrastrar_soltar extends AppCompatActivity {
                             comprobar=0;
                             ImageView view =(ImageView) event.getLocalState();
                             ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c2));
+                            ((ImageView)view).setImageDrawable(null);//remp
+                            victori.start();
+
+                        }
+                    }else if (nivel==8 || nivel_c==8){
+                        if(comprobar==1){
+                            comprobar=0;
+                            ImageView view =(ImageView) event.getLocalState();
+                            ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c3));
                             ((ImageView)view).setImageDrawable(null);//remp
                             victori.start();
 

@@ -60,6 +60,7 @@ public static int nivel_v;
                 break;
 
             case R.id.c_8:
+                nivel_v=8;
                 intent= new Intent(this, arrastrar_soltar.class);
                 this.startActivity(intent);
                 break;
