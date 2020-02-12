@@ -228,7 +228,7 @@ public class memorama extends AppCompatActivity {
                     botonera[i].setImageResource(fondo);
                 }
             }
-        }, 1000);
+        }, 2000);
 
         //AÑADIMOS LOS EVENTOS A LOS BOTONES DEL JUEGO
         for(int i=0; i <arrayBarajado.size(); i++){

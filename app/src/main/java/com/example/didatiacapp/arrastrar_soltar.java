@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static com.example.didatiacapp.escojer_niveles.nivel_v;
 
@@ -43,6 +44,7 @@ public class arrastrar_soltar extends AppCompatActivity {
         b_1 = findViewById(R.id.siguiente);
         base_1 = findViewById(R.id.base);
         //audios
+
         a1= MediaPlayer.create(this, R.raw.cerebro);
         a2= MediaPlayer.create(this, R.raw.corazon);
         a3= MediaPlayer.create(this, R.raw.estomago);
@@ -85,6 +87,7 @@ public class arrastrar_soltar extends AppCompatActivity {
                         }
                         //Coloco el tiempo en milisegundos
                     },500);
+                     texto();
                 }
             }
         });
@@ -93,7 +96,9 @@ public class arrastrar_soltar extends AppCompatActivity {
 
 
         }
-
+public void texto(){
+    Toast.makeText(this,"Aun no as terminado amigo",Toast.LENGTH_SHORT).show();
+    }
 
     private void compruebo() {
        if(nivel==2 || nivel_c==2) {
@@ -111,7 +116,7 @@ public class arrastrar_soltar extends AppCompatActivity {
             },500);
         }else if(nivel==3 || nivel_c==3) {
             base_1.setImageResource(R.drawable.c8_e);
-            txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
+            txt.setText("Organo que forma parte del sistema \n digestivo y endocrino");
             img_1.setImageResource(R.drawable.c4);
             img_2.setImageResource(R.drawable.c5);
             img_3.setImageResource(R.drawable.c8);
@@ -124,7 +129,7 @@ public class arrastrar_soltar extends AppCompatActivity {
             },500);
         }else if(nivel==4 || nivel_c==4) {
             base_1.setImageResource(R.drawable.c7_e);
-            txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
+            txt.setText("Ayuda a mantener la respiracion\ndesde la laringe a los pulmones");
             img_1.setImageResource(R.drawable.c2);
             img_2.setImageResource(R.drawable.c7);
             img_3.setImageResource(R.drawable.c3);
@@ -137,7 +142,7 @@ public class arrastrar_soltar extends AppCompatActivity {
             },500);
         }else if(nivel==5 || nivel_c==5) {
             base_1.setImageResource(R.drawable.c4_e);
-            txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
+            txt.setText("Organo responsable de la\ndesintoxicacion de cuerpo y almacena vitaminas");
             img_1.setImageResource(R.drawable.c4);
             img_2.setImageResource(R.drawable.c3);
             img_3.setImageResource(R.drawable.c1);
@@ -150,7 +155,7 @@ public class arrastrar_soltar extends AppCompatActivity {
             },500);
         }else if(nivel==6 || nivel_c==6) {
             base_1.setImageResource(R.drawable.in);
-            txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
+            txt.setText("Organo responsable de la eliminacion\nde los residuos de la comida del cuerpo");
             img_1.setImageResource(R.drawable.c3);
             img_2.setImageResource(R.drawable.c6);
             img_3.setImageResource(R.drawable.c5);
@@ -176,7 +181,7 @@ public class arrastrar_soltar extends AppCompatActivity {
             },500);
         }else if(nivel==8 || nivel_c==8) {
         base_1.setImageResource(R.drawable.in);
-        txt.setText("Organo responsable de bombear\nla sangre por  el cuerpo ");
+        txt.setText("Organo responsable de digerir\nla comida del cuerpo");
         img_1.setImageResource(R.drawable.c3);
         img_2.setImageResource(R.drawable.c4);
         img_3.setImageResource(R.drawable.c7);
