@@ -35,6 +35,7 @@ public class arrastrar_soltar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arrastrar_soltar);
         nivel_c=nivel_v;
+        nivel=nivel_v;
         img_1 = findViewById(R.id.i_1);
         img_2 = findViewById(R.id.i_2);
         img_3 = findViewById(R.id.i_3);
@@ -186,7 +187,10 @@ public class arrastrar_soltar extends AppCompatActivity {
             }
             //Coloco el tiempo en milisegundos
         },500);
-    }else if(nivel==1 || nivel_c==1)
+    }else if(nivel==9) {
+          Intent intent = new Intent(this, felicidades.class);
+           this.startActivity(intent);
+       }else if(nivel==1 || nivel_c==1)
 
         {
             base_1.setImageResource(R.drawable.c1_e);

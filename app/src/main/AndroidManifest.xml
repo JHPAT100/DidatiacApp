@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/logo_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".escojer_niveles"
+        <activity android:name=".felicidades"></activity>
+        <activity
+            android:name=".escojer_niveles"
             android:parentActivityName=".menu_juegos"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".memorama"
             android:parentActivityName=".menu_juegos"
