@@ -15,13 +15,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static com.example.didatiacapp.escojer_niveles.nivel_v;
+
 public class arrastrar_soltar extends AppCompatActivity {
 
     //
     ImageView img_1,img_2,base_1,img_3;
     Intent intent;
     int comprobar=0,gano=0;
-    public int nivel=1;
+    public int nivel=1,nivel_c;
     Button b_1;
     TextView txt;
     ProgressDialog progreso;
@@ -32,6 +34,7 @@ public class arrastrar_soltar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arrastrar_soltar);
+        nivel_c=nivel_v;
         img_1 = findViewById(R.id.i_1);
         img_2 = findViewById(R.id.i_2);
         img_3 = findViewById(R.id.i_3);
@@ -69,6 +72,7 @@ public class arrastrar_soltar extends AppCompatActivity {
                     nivel = nivel + 1;
                     progreso.setMessage("Comprobando....");
                     progreso.show();
+                    nivel_c=nivel_c+1;
                     compruebo();
                 }else if(gano==0){
                     progreso.setMessage("Comprobando....");
@@ -91,17 +95,7 @@ public class arrastrar_soltar extends AppCompatActivity {
 
 
     private void compruebo() {
-        if(nivel==1)
-
-        {
-            base_1.setImageResource(R.drawable.c1_e);
-            txt.setText("Organo responsable del pensamiento \n y el buen funcionanmiento del cuerpo");
-            img_1.setImageResource(R.drawable.c1);
-            img_2.setImageResource(R.drawable.c2);
-            img_3.setImageResource(R.drawable.c3);
-
-
-        }else if(nivel==2) {
+       if(nivel==2 || nivel_c==2) {
             base_1.setImageResource(R.drawable.c6_e);
             txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
             img_1.setImageResource(R.drawable.c3);
@@ -114,7 +108,7 @@ public class arrastrar_soltar extends AppCompatActivity {
                 }
                 //Coloco el tiempo en milisegundos
             },500);
-        }else if(nivel==3) {
+        }else if(nivel==3 || nivel_c==3) {
             base_1.setImageResource(R.drawable.c8_e);
             txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
             img_1.setImageResource(R.drawable.c4);
@@ -127,7 +121,7 @@ public class arrastrar_soltar extends AppCompatActivity {
                 }
                 //Coloco el tiempo en milisegundos
             },500);
-        }else if(nivel==4) {
+        }else if(nivel==4 || nivel_c==4) {
             base_1.setImageResource(R.drawable.c7_e);
             txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
             img_1.setImageResource(R.drawable.c2);
@@ -140,7 +134,7 @@ public class arrastrar_soltar extends AppCompatActivity {
                 }
                 //Coloco el tiempo en milisegundos
             },500);
-        }else if(nivel==5) {
+        }else if(nivel==5 || nivel_c==5) {
             base_1.setImageResource(R.drawable.c4_e);
             txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
             img_1.setImageResource(R.drawable.c4);
@@ -153,8 +147,8 @@ public class arrastrar_soltar extends AppCompatActivity {
                 }
                 //Coloco el tiempo en milisegundos
             },500);
-        }else if(nivel==6) {
-            base_1.setImageResource(R.drawable.c5_e);
+        }else if(nivel==6 || nivel_c==6) {
+            base_1.setImageResource(R.drawable.in);
             txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
             img_1.setImageResource(R.drawable.c3);
             img_2.setImageResource(R.drawable.c6);
@@ -166,9 +160,9 @@ public class arrastrar_soltar extends AppCompatActivity {
                 }
                 //Coloco el tiempo en milisegundos
             },500);
-        }else if(nivel==7) {
-            base_1.setImageResource(R.drawable.c2_e);
-            txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
+        }else if(nivel==7 || nivel_c==7) {
+            base_1.setImageResource(R.drawable.in);
+            txt.setText("Organo responsable de bombear\nla sangre por  el cuerpo ");
             img_1.setImageResource(R.drawable.c3);
             img_2.setImageResource(R.drawable.c2);
             img_3.setImageResource(R.drawable.c4);
@@ -179,6 +173,16 @@ public class arrastrar_soltar extends AppCompatActivity {
                 }
                 //Coloco el tiempo en milisegundos
             },500);
+        }else if(nivel==1 || nivel_c==1)
+
+        {
+            base_1.setImageResource(R.drawable.c1_e);
+            txt.setText("Organo responsable del pensamiento \n y el buen funcionanmiento del cuerpo");
+            img_1.setImageResource(R.drawable.c1);
+            img_2.setImageResource(R.drawable.c2);
+            img_3.setImageResource(R.drawable.c3);
+
+
         }
     }
 
@@ -194,30 +198,7 @@ public class arrastrar_soltar extends AppCompatActivity {
                 v.startDrag(data,shadowBuilder,v,0);
 
                 //compruebo cual se toco
-                if(nivel==1) {
-                    switch (v.getId()) {
-                        case R.id.i_1:
-
-                            comprobar = 1;
-                            gano=1;
-                            a1.start();
-                            break;
-
-                        case R.id.i_2:
-                            comprobar = 0;
-                            gano=0;
-                            a2.start();
-
-                            break;
-
-                        case R.id.i_3:
-                            comprobar = 0;
-                            gano=0;
-                            a3.start();
-
-                            break;
-                    }
-                }else if (nivel==2){
+               if (nivel==2 || nivel_c==2){
                     switch (v.getId()) {
                         case R.id.i_1:
 
@@ -229,18 +210,18 @@ public class arrastrar_soltar extends AppCompatActivity {
                         case R.id.i_2:
                             comprobar = 1;
                             gano=1;
-                            a7.start();
-
-                            break;
-
-                        case R.id.i_3:
-                            comprobar = 0;
-                            gano=0;
                             a6.start();
 
                             break;
+
+                        case R.id.i_3:
+                            comprobar = 0;
+                            gano=0;
+                            a8.start();
+
+                            break;
                     }
-                }else if (nivel==3){
+                }else if (nivel==3 || nivel_c==3){
                     switch (v.getId()) {
                         case R.id.i_1:
 
@@ -263,7 +244,7 @@ public class arrastrar_soltar extends AppCompatActivity {
 
                             break;
                     }
-                }else if (nivel==4){
+                }else if (nivel==4 || nivel_c==4){
                     switch (v.getId()) {
                         case R.id.i_1:
 
@@ -286,7 +267,7 @@ public class arrastrar_soltar extends AppCompatActivity {
 
                             break;
                     }
-                }else if (nivel==5){
+                }else if (nivel==5 || nivel_c==5){
                     switch (v.getId()) {
                         case R.id.i_1:
 
@@ -309,7 +290,7 @@ public class arrastrar_soltar extends AppCompatActivity {
 
                             break;
                     }
-                }else if (nivel==6){
+                }else if (nivel==6 || nivel_c==6){
                     switch (v.getId()) {
                         case R.id.i_1:
 
@@ -332,7 +313,7 @@ public class arrastrar_soltar extends AppCompatActivity {
 
                             break;
                     }
-                }else if (nivel==7){
+                }else if (nivel==7 || nivel_c==7){
                     switch (v.getId()) {
                         case R.id.i_1:
 
@@ -352,6 +333,29 @@ public class arrastrar_soltar extends AppCompatActivity {
                             comprobar = 0;
                             gano=0;
                             a4.start();
+
+                            break;
+                    }
+                } else if(nivel==1 || nivel_c==1) {
+                    switch (v.getId()) {
+                        case R.id.i_1:
+
+                            comprobar = 1;
+                            gano=1;
+                            a1.start();
+                            break;
+
+                        case R.id.i_2:
+                            comprobar = 0;
+                            gano=0;
+                            a2.start();
+
+                            break;
+
+                        case R.id.i_3:
+                            comprobar = 0;
+                            gano=0;
+                            a3.start();
 
                             break;
                     }
@@ -380,15 +384,7 @@ public class arrastrar_soltar extends AppCompatActivity {
                         break;
                 case DragEvent.ACTION_DROP:
                     //compruebo si es el correcto
-                    if(nivel==1){
-                        if(comprobar==1){
-                            comprobar=0;
-                            ImageView view =(ImageView) event.getLocalState();
-                            ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c1));
-                            ((ImageView)view).setImageDrawable(null);//remp
-                            victori.start();
-                        }
-                    }else if (nivel==2){
+                    if (nivel==2 || nivel_c==2){
                         if(comprobar==1){
                             comprobar=0;
                             ImageView view =(ImageView) event.getLocalState();
@@ -398,7 +394,7 @@ public class arrastrar_soltar extends AppCompatActivity {
 
                         }
                     }
-                    else if (nivel==3){
+                    else if (nivel==3 || nivel_c==3){
                         if(comprobar==1){
                             comprobar=0;
                             ImageView view =(ImageView) event.getLocalState();
@@ -408,7 +404,7 @@ public class arrastrar_soltar extends AppCompatActivity {
 
                         }
                     }
-                    else if (nivel==4){
+                    else if (nivel==4 || nivel_c==4){
                         if(comprobar==1){
                             comprobar=0;
                             ImageView view =(ImageView) event.getLocalState();
@@ -418,7 +414,7 @@ public class arrastrar_soltar extends AppCompatActivity {
 
                         }
                     }
-                    else if (nivel==5){
+                    else if (nivel==5 || nivel_c==5){
                         if(comprobar==1){
                             comprobar=0;
                             ImageView view =(ImageView) event.getLocalState();
@@ -428,7 +424,7 @@ public class arrastrar_soltar extends AppCompatActivity {
 
                         }
                     }
-                    else if (nivel==6){
+                    else if (nivel==6 || nivel_c==6){
                         if(comprobar==1){
                             comprobar=0;
                             ImageView view =(ImageView) event.getLocalState();
@@ -438,7 +434,7 @@ public class arrastrar_soltar extends AppCompatActivity {
 
                         }
                     }
-                    else if (nivel==7){
+                    else if (nivel==7 || nivel_c==7){
                         if(comprobar==1){
                             comprobar=0;
                             ImageView view =(ImageView) event.getLocalState();
@@ -447,7 +443,15 @@ public class arrastrar_soltar extends AppCompatActivity {
                             victori.start();
 
                         }
+                    }else if(nivel==1 || nivel_c==1){
+                    if(comprobar==1){
+                        comprobar=0;
+                        ImageView view =(ImageView) event.getLocalState();
+                        ((ImageView)v).setImageDrawable(getResources().getDrawable(R.drawable.c1));
+                        ((ImageView)view).setImageDrawable(null);//remp
+                        victori.start();
                     }
+                }
 
                     //compruebo si es el correcto
                         break;
