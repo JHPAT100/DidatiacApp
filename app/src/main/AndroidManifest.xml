@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/logo_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".felicidades"></activity>
+        <activity android:name=".info_app"></activity>
+        <activity android:name=".felicidades" />
         <activity
             android:name=".escojer_niveles"
             android:parentActivityName=".menu_juegos"
