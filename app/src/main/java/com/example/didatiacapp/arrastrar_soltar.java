@@ -27,6 +27,7 @@ public class arrastrar_soltar extends AppCompatActivity {
     public int nivel=1,nivel_c;
     Button b_1;
     TextView txt;
+
     ProgressDialog progreso;
     MediaPlayer a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,victori;
     //
@@ -193,6 +194,7 @@ public void texto(){
             //Coloco el tiempo en milisegundos
         },500);
     }else if(nivel==9) {
+           MainActivity.comprueba=1;
           Intent intent = new Intent(this, felicidades.class);
            this.startActivity(intent);
        }else if(nivel==1 || nivel_c==1)

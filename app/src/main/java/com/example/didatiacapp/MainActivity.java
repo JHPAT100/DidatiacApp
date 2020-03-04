@@ -9,8 +9,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-ImageView i1,i2;
+    public static int comprueba;
+    ImageView i1,i2;
 Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

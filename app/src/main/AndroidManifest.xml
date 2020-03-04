@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".pregunta"
-            android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
+            android:parentActivityName=".menu_juegos"
+            android:screenOrientation="portrait"
+           ></activity>
         <activity android:name=".info_app" />
         <activity android:name=".felicidades" />
         <activity

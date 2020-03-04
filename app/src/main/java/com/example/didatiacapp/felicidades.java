@@ -17,8 +17,13 @@ public class felicidades extends AppCompatActivity {
 
         switch(v.getId()){
             case R.id.salir_f:
+              if(MainActivity.comprueba==1){
                 Intent intent= new Intent(this, escojer_niveles.class);
                 this.startActivity(intent);
+              }else  if (MainActivity.comprueba==2){
+                  Intent intent= new Intent(this, menu_juegos.class);
+                  this.startActivity(intent);
+              }
                 break;
 
         }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bgapp"
+    android:background="@drawable/degradado"
     tools:context=".pregunta">
 
     <TextView
@@ -17,6 +17,7 @@
         android:layout_marginTop="40dp"
         android:text="En lucha batalla"
         android:textColor="#FFF"
+        android:visibility="gone"
         android:textSize="22sp" />
 
     <LinearLayout

@@ -122,7 +122,7 @@ public class pregunta extends AppCompatActivity {
 
         if(editText.getText().toString().equals(textAnswer)) {
 //            Toast.makeText(preguntas.this, "Correct", Toast.LENGTH_SHORT).show();
-
+            MainActivity.comprueba=2;
             Intent a = new Intent(pregunta.this,felicidades.class);
             startActivity(a);
 
