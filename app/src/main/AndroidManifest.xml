@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/logo_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".info_app"></activity>
+        <activity android:name=".pregunta"
+            android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
+        <activity android:name=".info_app" />
         <activity android:name=".felicidades" />
         <activity
             android:name=".escojer_niveles"

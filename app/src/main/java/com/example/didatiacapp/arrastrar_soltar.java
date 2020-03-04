@@ -103,7 +103,7 @@ public void texto(){
     private void compruebo() {
        if(nivel==2 || nivel_c==2) {
             base_1.setImageResource(R.drawable.c6_e);
-            txt.setText("Organo responsable de la limpieza \n y la eliminacion de toxinas del cuerpo");
+            txt.setText("Órgano responsable de la limpieza \n y la eliminación de toxinas del cuerpo");
             img_1.setImageResource(R.drawable.c3);
             img_2.setImageResource(R.drawable.c6);
             img_3.setImageResource(R.drawable.c8);
@@ -116,7 +116,7 @@ public void texto(){
             },500);
         }else if(nivel==3 || nivel_c==3) {
             base_1.setImageResource(R.drawable.c8_e);
-            txt.setText("Organo que forma parte del sistema \n digestivo y endocrino");
+            txt.setText("Órgano que forma parte del sistema \n digestivo y endocrino");
             img_1.setImageResource(R.drawable.c4);
             img_2.setImageResource(R.drawable.c5);
             img_3.setImageResource(R.drawable.c8);
@@ -129,7 +129,7 @@ public void texto(){
             },500);
         }else if(nivel==4 || nivel_c==4) {
             base_1.setImageResource(R.drawable.c7_e);
-            txt.setText("Ayuda a mantener la respiracion\ndesde la laringe a los pulmones");
+            txt.setText("Ayuda a mantener la respiración\ndesde la laringe a los pulmones");
             img_1.setImageResource(R.drawable.c2);
             img_2.setImageResource(R.drawable.c7);
             img_3.setImageResource(R.drawable.c3);
@@ -142,7 +142,7 @@ public void texto(){
             },500);
         }else if(nivel==5 || nivel_c==5) {
             base_1.setImageResource(R.drawable.c4_e);
-            txt.setText("Organo responsable de la\ndesintoxicacion de cuerpo y almacena vitaminas");
+            txt.setText("Órgano responsable de la\ndesintoxicación de cuerpo y almacenas vitaminas");
             img_1.setImageResource(R.drawable.c4);
             img_2.setImageResource(R.drawable.c3);
             img_3.setImageResource(R.drawable.c1);
@@ -155,7 +155,7 @@ public void texto(){
             },500);
         }else if(nivel==6 || nivel_c==6) {
             base_1.setImageResource(R.drawable.in);
-            txt.setText("Organo responsable de la eliminacion\nde los residuos de la comida del cuerpo");
+            txt.setText("Órgano responsable de la eliminacion\nde los residuos de la comida del cuerpo");
             img_1.setImageResource(R.drawable.c3);
             img_2.setImageResource(R.drawable.c6);
             img_3.setImageResource(R.drawable.c5);
@@ -168,7 +168,7 @@ public void texto(){
             },500);
         }else if(nivel==7 || nivel_c==7) {
             base_1.setImageResource(R.drawable.in);
-            txt.setText("Organo responsable de bombear\nla sangre por  el cuerpo ");
+            txt.setText("Órgano responsable de bombear\nla sangre por el cuerpo ");
             img_1.setImageResource(R.drawable.c3);
             img_2.setImageResource(R.drawable.c2);
             img_3.setImageResource(R.drawable.c4);
@@ -181,7 +181,7 @@ public void texto(){
             },500);
         }else if(nivel==8 || nivel_c==8) {
         base_1.setImageResource(R.drawable.in);
-        txt.setText("Organo responsable de digerir\nla comida del cuerpo");
+        txt.setText("Órgano responsable de digerir\nla comida del cuerpo");
         img_1.setImageResource(R.drawable.c3);
         img_2.setImageResource(R.drawable.c4);
         img_3.setImageResource(R.drawable.c7);
@@ -199,7 +199,7 @@ public void texto(){
 
         {
             base_1.setImageResource(R.drawable.c1_e);
-            txt.setText("Organo responsable del pensamiento \n y el buen funcionanmiento del cuerpo");
+            txt.setText("Órgano responsable del pensamiento \n y el buen funcionanmiento del cuerpo");
             img_1.setImageResource(R.drawable.c1);
             img_2.setImageResource(R.drawable.c2);
             img_3.setImageResource(R.drawable.c3);

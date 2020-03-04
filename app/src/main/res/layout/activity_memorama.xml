@@ -199,7 +199,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="75dp"
+        android:layout_width="wrap_content"
         android:layout_height="70dp"
         app:cardBackgroundColor="#E0DADA"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -216,7 +216,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Puntuacion" />
+                android:text="Puntuación"
+                android:textColor="#000000"/>
         </androidx.cardview.widget.CardView>
 
         <LinearLayout

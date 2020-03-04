@@ -36,7 +36,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Has logrado terminar los niveles fantasmales \n Fantasmon esta orgulloso de ti \n Exito"
+        android:text="Has logrado terminar los niveles fantasmales \n Fantasmón está orgulloso de ti \n Éxito"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18dp"

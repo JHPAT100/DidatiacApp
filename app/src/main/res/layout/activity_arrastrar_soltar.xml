@@ -36,7 +36,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Arrastra y suelta la opcion correcta:"
+                        android:text="Arrastra y suelta la opción correcta:"
                         android:textColor="#000000" />
                 </androidx.cardview.widget.CardView>
             </TableRow>
@@ -97,7 +97,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Organo responsable del pensamiento \n y el buen funcionanmiento del cuerpo" />
+                        android:text="Órgano responsable del pensamiento \n y el buen funcionamiento del cuerpo" />
 
                 </androidx.cardview.widget.CardView>
 

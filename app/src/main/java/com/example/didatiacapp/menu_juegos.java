@@ -25,6 +25,11 @@ Intent intent;
                 intent= new Intent(this, escojer_niveles.class);
                 this.startActivity(intent);
                 break;
+
+            case R.id.m_3:
+                intent= new Intent(this, pregunta.class);
+                this.startActivity(intent);
+                break;
         }
     }
 
