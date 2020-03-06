@@ -37,7 +37,7 @@
             android:layout_width="220dp"
             android:lineSpacingExtra="6dp"
             android:layout_height="wrap_content"
-            android:text="Pregunta sobre un animal xd" />
+            android:text="Órgano responsable de la desintoxicación de cuerpo y almacenas vitaminas" />
 
     </LinearLayout>
 

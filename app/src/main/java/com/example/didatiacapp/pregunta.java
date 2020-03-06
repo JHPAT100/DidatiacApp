@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -21,8 +22,9 @@ public class pregunta extends AppCompatActivity {
 
     private int presCounter = 0;
     private int maxPresCounter = 4;
-    private String[] keys = {"G", "T", "O", "E", "A"};
-    private String textAnswer = "GATO";
+    MediaPlayer victori;
+    private String[] keys = {"H", "I", "G", "A", "D","O"};
+    private String textAnswer = "HIGADO";
     TextView textScreen, textQuestion, textTitle;
     Animation smallbigforth;
 
@@ -30,7 +32,7 @@ public class pregunta extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregunta);
-
+        victori= MediaPlayer.create(this, R.raw.victoria);
         smallbigforth = AnimationUtils.loadAnimation(this, R.anim.smallbigforth);
 
         keys = shuffleArray(keys);
@@ -39,7 +41,7 @@ public class pregunta extends AppCompatActivity {
             addView(((LinearLayout) findViewById(R.id.layoutParent)), key, ((EditText) findViewById(R.id.editText)));
         }
 //CONTADOR DE PALABRAS MAXIMAS PARA TOCAR
-        maxPresCounter = 4;
+        maxPresCounter = 6;
         //CONTADOR DE PALABRAS MAXIMAS PARA TOCAR
     }
 
@@ -67,7 +69,7 @@ public class pregunta extends AppCompatActivity {
         final TextView textView = new TextView(this);
 
         textView.setLayoutParams(linearLayoutParams);
-        textView.setBackground(this.getResources().getDrawable(R.drawable.bgpink));
+        textView.setBackground(this.getResources().getDrawable(R.drawable.bgpink_2));
         textView.setTextColor(this.getResources().getColor(R.color.colorPurple));
         textView.setGravity(Gravity.CENTER);
         textView.setText(text);
@@ -123,6 +125,7 @@ public class pregunta extends AppCompatActivity {
         if(editText.getText().toString().equals(textAnswer)) {
 //            Toast.makeText(preguntas.this, "Correct", Toast.LENGTH_SHORT).show();
             MainActivity.comprueba=2;
+            victori.start();
             Intent a = new Intent(pregunta.this,felicidades.class);
             startActivity(a);
 
